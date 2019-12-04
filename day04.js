@@ -5,8 +5,8 @@ let countPartTwo = 0
 
 function findPasswords(){
     for(let i=a; i<=b;i++){
-    compatible(i,'partOne')==true ? countPartOne++: undefined;
-    compatible(i,'partTwo')==true ? countPartTwo++ : undefined;
+        compatible(i,'partOne')==true ? countPartOne++: undefined;
+        compatible(i,'partTwo')==true ? countPartTwo++ : undefined;
     }
     console.log('PART ONE   ' + countPartOne)
     console.log('PART TWO   ' + countPartTwo)
@@ -24,22 +24,22 @@ function repeated(nb,part){
         for(let i=0;i<nb.length-1;i++){
             let k = 0            
              if(nb[i] == nb[i+1]){
-                     let j = i+2
-                     let letter = nb[j]
-                 while(letter==nb[i]){
-                     j++
-                     letter = nb[j]                   
-                     k++
-                 }
+                let j = i+2
+                let nextNb = nb[j]
+                while(nextNb==nb[i]){
+                    j++
+                    nextNb = nb[j]                   
+                    k++
+                }
                  if(k==0){
-                     return true
+                    return true
                  }else{
-                     i += k 
+                    i += k 
                  }
              }
          }
          return false
-         
+
     }else{
         res = false
         for(let i=0;i<nb.length-1;i++){
