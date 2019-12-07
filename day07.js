@@ -37,7 +37,7 @@ const program = function (part){
 program('partOne')
 program('partTwo')
 
-function getSignal(data,iP,id,queue,dest){
+function getSignal(data,iP,id,queue,dest){ // Amp's array, indexPointer, Amp's id, Amp's queue list, Amp's output receiver 
 
     for(let i=iP;i<data.length;i++){
         let opcode = data[i].toString().split('');
