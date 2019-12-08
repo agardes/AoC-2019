@@ -38,7 +38,7 @@ let k =0
 let img = ''
 for(let i=0;i<image.length;i++){
     k++
-    image[i]==1 ?  img = img + '▮' :   img = img + '.'
+    image[i]==1 ?  img = img + '▮' :   img = img + ' '
     if(k==25){
         k = 0;
         console.log(img);
