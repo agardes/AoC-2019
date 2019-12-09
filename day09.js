@@ -27,7 +27,7 @@ function getDiagnostic(input){
 
     for(let i=0;i<data.length;i++){
         let opcode = data[i].toString().split('');
-        opcode.length == 1 ? instruction = parseInt(opcode[opcode.length-1]) :  instruction = parseInt(opcode[opcode.length-2] + opcode[opcode.length-1])
+        let instruction = opcode.length == 1 ? parseInt(opcode[opcode.length-1]) :  parseInt(opcode[opcode.length-2] + opcode[opcode.length-1])
         if(instruction==99){            
             i = data.length;
             return output
