@@ -25,9 +25,6 @@ function getIndex(mode,ip){
     }
 }
 function getDiagnostic(){
-    relativeBase = 0;
-    output = []
-    tiles = [];
     data[0] = 2
     for(let i=0;i<data.length;i++){
         if(output.length==3){
@@ -38,9 +35,7 @@ function getDiagnostic(){
                 if(!t){
                     let tile = new Tile(output[0],output[1],output[2])           
                     tiles.push(tile)
-                    if(tile.id==2){
-                        blocks++
-                    }
+                    tiles.id == 2 ? blocks++ : undefined
                 }else{
                     t.id = output[2]
                 }           
